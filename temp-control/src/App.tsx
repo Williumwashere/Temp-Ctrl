@@ -5,14 +5,22 @@ const App = () => {
   const [color, setColor] = useState("cold");
 
   const increaseTemperature = () => {
-    const newTemp = temperature + 1
+    if (temperature === 30) return;
+    const newTemp = temperature + 1;
+    if (newTemp > 15) {
+      setColor("hot");
+    }
     setTemperature(newTemp);
   };
 
   const decreaseTemperature = () => {
-    const newTemp = temperature - 1
-    setTemperature(newTemp)
-  }
+    if (temperature === -30) return;
+    const newTemp = temperature - 1;
+    if (newTemp < 15) {
+      setColor("cold");
+    }
+    setTemperature(newTemp);
+  };
 
   return (
     <div className="app-container">
