@@ -1,12 +1,13 @@
-import React from 'react';
-import './App.css';
+import React from "react";
 
-function App() {
+const App = () => {
   return (
-    <div>
-
+    <div className="app-container">
+      <div className="temperature-display-container">
+        <div className="temperature-display">10°C</div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
