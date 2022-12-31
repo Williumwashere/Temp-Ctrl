@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+//CSS contents were not made by myself. I later use styled components.
+
 const App = () => {
   const [temperature, setTemperature] = useState(10);
   const [color, setColor] = useState("cold");
